@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>openthread-br: src/utils/event_emitter.hpp Source File</title>
+<title>openthread-br: src/common/dns_utils.hpp Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.2.0-083fb69</span>
+   &#160;<span id="projectnumber">0.3.0-e33021b</span>
    </div>
   </td>
  </tr>
@@ -62,16 +62,16 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">event_emitter.hpp</div>  </div>
+<div class="title">dns_utils.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d9/def/event__emitter_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *    Copyright (c) 2017, The OpenThread Authors.</span></div>
+<a href="../../d9/d29/dns__utils_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *    Copyright (c) 2021, The OpenThread Authors.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *    All rights reserved.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *    Redistribution and use in source and binary forms, with or without</span></div>
@@ -98,45 +98,38 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *    POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifndef OTBR_COMMON_EVENT_EMITTER_HPP_</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define OTBR_COMMON_EVENT_EMITTER_HPP_</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifndef OTBR_COMMON_DNS_UTILS_HPP_</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define OTBR_COMMON_DNS_UTILS_HPP_</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d16/config_8h.html">openthread-br/config.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;common/types.hpp&quot;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span>otbr {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../dd/dcb/classotbr_1_1EventEmitter.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/dcb/classotbr_1_1EventEmitter.html">EventEmitter</a></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">typedef</span> void (*Callback)(<span class="keywordtype">void</span> *aContext, <span class="keywordtype">int</span> aEvent, va_list aArguments);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac5b618912e079429da1071d8e3b31b65">On</a>(<span class="keywordtype">int</span> aEvent, Callback aCallback, <span class="keywordtype">void</span> *aContext);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/dcb/classotbr_1_1EventEmitter.html#a59e610d42604ceb9443ec9fa4e364ffb">Off</a>(<span class="keywordtype">int</span> aEvent, Callback aCallback, <span class="keywordtype">void</span> *aContext);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac16b1dd365337036053e4b7403199fff">Emit</a>(<span class="keywordtype">int</span> aEvent, ...);</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d9/d29/dns__utils_8hpp.html#acd12d41e145ce949df9c371551812640">   43</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d9/d29/dns__utils_8hpp.html#acd12d41e145ce949df9c371551812640">DnsNameType</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    kDnsNameTypeUnknown,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    kDnsNameTypeService,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    kDnsNameTypeInstance,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    kDnsNameTypeHost,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="../../d9/d29/dns__utils_8hpp.html#acd12d41e145ce949df9c371551812640">DnsNameType</a> <a class="code" href="../../d9/d29/dns__utils_8hpp.html#a0179b4d512165f7d5907add836044c11">GetDnsNameType</a>(<span class="keyword">const</span> std::string &amp;aFullName);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<a class="code" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a> <a class="code" href="../../d9/d29/dns__utils_8hpp.html#a05a581ad1a6f4677cb958d2fc8f9081a">SplitFullServiceName</a>(<span class="keyword">const</span> std::string &amp;aFullName, std::string &amp;aType, std::string &amp;aDomain);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a> <a class="code" href="../../d9/d29/dns__utils_8hpp.html#adf88ef7618d5246f10d62e57aa1064cd">SplitFullServiceInstanceName</a>(<span class="keyword">const</span> std::string &amp;aFullName,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                       std::string &amp;      aInstanceName,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                       std::string &amp;      aType,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                       std::string &amp;      aDomain);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">typedef</span> std::pair&lt;Callback, void *&gt; Handler;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">typedef</span> std::list&lt;Handler&gt;          Handlers;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">typedef</span> std::map&lt;int, Handlers&gt;     Events;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    Events                              mEvents;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;} <span class="comment">// namespace otbr</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif // OTBR_COMMON_EVENT_EMITTER_HPP_</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<a class="code" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a> <a class="code" href="../../d9/d29/dns__utils_8hpp.html#ae4e1d920684b174d76ce1e2d54357a6e">SplitFullHostName</a>(<span class="keyword">const</span> std::string &amp;aFullName, std::string &amp;aHostName, std::string &amp;aDomain);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif // OTBR_COMMON_DNS_UTILS_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassotbr_1_1EventEmitter_html_a59e610d42604ceb9443ec9fa4e364ffb"><div class="ttname"><a href="../../dd/dcb/classotbr_1_1EventEmitter.html#a59e610d42604ceb9443ec9fa4e364ffb">otbr::EventEmitter::Off</a></div><div class="ttdeci">void Off(int aEvent, Callback aCallback, void *aContext)</div><div class="ttdef"><b>Definition:</b> event_emitter.cpp:44</div></div>
-<div class="ttc" id="aclassotbr_1_1EventEmitter_html_ac5b618912e079429da1071d8e3b31b65"><div class="ttname"><a href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac5b618912e079429da1071d8e3b31b65">otbr::EventEmitter::On</a></div><div class="ttdeci">void On(int aEvent, Callback aCallback, void *aContext)</div><div class="ttdef"><b>Definition:</b> event_emitter.cpp:35</div></div>
-<div class="ttc" id="aclassotbr_1_1EventEmitter_html_ac16b1dd365337036053e4b7403199fff"><div class="ttname"><a href="../../dd/dcb/classotbr_1_1EventEmitter.html#ac16b1dd365337036053e4b7403199fff">otbr::EventEmitter::Emit</a></div><div class="ttdeci">void Emit(int aEvent,...)</div><div class="ttdef"><b>Definition:</b> event_emitter.cpp:70</div></div>
-<div class="ttc" id="aclassotbr_1_1EventEmitter_html"><div class="ttname"><a href="../../dd/dcb/classotbr_1_1EventEmitter.html">otbr::EventEmitter</a></div><div class="ttdef"><b>Definition:</b> event_emitter.hpp:50</div></div>
-<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="../../db/d16/config_8h.html">config.h</a></div></div>
+<div class="ttc" id="adns__utils_8hpp_html_ae4e1d920684b174d76ce1e2d54357a6e"><div class="ttname"><a href="../../d9/d29/dns__utils_8hpp.html#ae4e1d920684b174d76ce1e2d54357a6e">SplitFullHostName</a></div><div class="ttdeci">otbrError SplitFullHostName(const std::string &amp;aFullName, std::string &amp;aHostName, std::string &amp;aDomain)</div><div class="ttdef"><b>Definition:</b> dns_utils.cpp:101</div></div>
+<div class="ttc" id="adns__utils_8hpp_html_acd12d41e145ce949df9c371551812640"><div class="ttname"><a href="../../d9/d29/dns__utils_8hpp.html#acd12d41e145ce949df9c371551812640">DnsNameType</a></div><div class="ttdeci">DnsNameType</div><div class="ttdef"><b>Definition:</b> dns_utils.hpp:43</div></div>
+<div class="ttc" id="adns__utils_8hpp_html_a0179b4d512165f7d5907add836044c11"><div class="ttname"><a href="../../d9/d29/dns__utils_8hpp.html#a0179b4d512165f7d5907add836044c11">GetDnsNameType</a></div><div class="ttdeci">DnsNameType GetDnsNameType(const std::string &amp;aFullName)</div><div class="ttdef"><b>Definition:</b> dns_utils.cpp:32</div></div>
+<div class="ttc" id="adns__utils_8hpp_html_a05a581ad1a6f4677cb958d2fc8f9081a"><div class="ttname"><a href="../../d9/d29/dns__utils_8hpp.html#a05a581ad1a6f4677cb958d2fc8f9081a">SplitFullServiceName</a></div><div class="ttdeci">otbrError SplitFullServiceName(const std::string &amp;aFullName, std::string &amp;aType, std::string &amp;aDomain)</div><div class="ttdef"><b>Definition:</b> dns_utils.cpp:82</div></div>
+<div class="ttc" id="adns__utils_8hpp_html_adf88ef7618d5246f10d62e57aa1064cd"><div class="ttname"><a href="../../d9/d29/dns__utils_8hpp.html#adf88ef7618d5246f10d62e57aa1064cd">SplitFullServiceInstanceName</a></div><div class="ttdeci">otbrError SplitFullServiceInstanceName(const std::string &amp;aFullName, std::string &amp;aInstanceName, std::string &amp;aType, std::string &amp;aDomain)</div><div class="ttdef"><b>Definition:</b> dns_utils.cpp:56</div></div>
+<div class="ttc" id="acommon_2types_8hpp_html_a9addd74a14dca1dab1b3e7a8205455aa"><div class="ttname"><a href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a></div><div class="ttdeci">otbrError</div><div class="ttdef"><b>Definition:</b> types.hpp:70</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
