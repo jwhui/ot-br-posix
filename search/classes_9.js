@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['onmeshprefix_699',['OnMeshPrefix',['../d5/d02/structotbr_1_1DBus_1_1OnMeshPrefix.html',1,'otbr::DBus']]],
-  ['openthreadclient_700',['OpenThreadClient',['../d3/d3f/classotbr_1_1Web_1_1OpenThreadClient.html',1,'otbr::Web']]]
+  ['neighborinfo_739',['NeighborInfo',['../d2/d47/structotbr_1_1DBus_1_1NeighborInfo.html',1,'otbr::DBus']]],
+  ['nodeinfo_740',['NodeInfo',['../d6/dbf/structotbr_1_1rest_1_1NodeInfo.html',1,'otbr::rest']]],
+  ['noncopyable_741',['NonCopyable',['../dc/d3c/classNonCopyable.html',1,'']]]
 ];

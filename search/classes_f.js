@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['webserver_719',['WebServer',['../d6/d83/classotbr_1_1Web_1_1WebServer.html',1,'otbr::Web']]],
-  ['wpannetworkinfo_720',['WpanNetworkInfo',['../d9/dc3/structotbr_1_1Web_1_1WpanNetworkInfo.html',1,'otbr::Web']]],
-  ['wpanservice_721',['WpanService',['../d3/d46/classotbr_1_1Web_1_1WpanService.html',1,'otbr::Web']]]
+  ['ubusagent_765',['UBusAgent',['../df/d00/classotbr_1_1ubus_1_1UBusAgent.html',1,'otbr::ubus']]],
+  ['ubusserver_766',['UbusServer',['../d9/dea/classotbr_1_1ubus_1_1UbusServer.html',1,'otbr::ubus']]]
 ];
