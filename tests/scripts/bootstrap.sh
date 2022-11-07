@@ -137,7 +137,7 @@ case "$(uname)" in
         fi
 
         if [ "${OTBR_MDNS-}" == 'mDNSResponder' ]; then
-            SOURCE_NAME=mDNSResponder-1310.80.1
+            SOURCE_NAME=mDNSResponder-1790.40.31
             wget https://github.com/apple-oss-distributions/mDNSResponder/archive/refs/tags/$SOURCE_NAME.tar.gz \
                 && mkdir -p $SOURCE_NAME \
                 && tar xvf $SOURCE_NAME.tar.gz -C $SOURCE_NAME --strip-components=1 \
