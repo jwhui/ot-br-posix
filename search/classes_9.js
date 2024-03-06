@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['nat64addressmapping_947',['Nat64AddressMapping',['../d5/d76/structotbr_1_1DBus_1_1Nat64AddressMapping.html',1,'otbr::DBus']]],
-  ['nat64componentstate_948',['Nat64ComponentState',['../df/d99/structotbr_1_1DBus_1_1Nat64ComponentState.html',1,'otbr::DBus']]],
-  ['nat64errorcounters_949',['Nat64ErrorCounters',['../d2/d36/structotbr_1_1DBus_1_1Nat64ErrorCounters.html',1,'otbr::DBus']]],
-  ['nat64packetcounters_950',['Nat64PacketCounters',['../dc/dcd/structotbr_1_1DBus_1_1Nat64PacketCounters.html',1,'otbr::DBus']]],
-  ['nat64protocolcounters_951',['Nat64ProtocolCounters',['../da/da1/structotbr_1_1DBus_1_1Nat64ProtocolCounters.html',1,'otbr::DBus']]],
-  ['nat64trafficcounters_952',['Nat64TrafficCounters',['../de/dc6/structotbr_1_1DBus_1_1Nat64TrafficCounters.html',1,'otbr::DBus']]],
-  ['neighborinfo_953',['NeighborInfo',['../d2/d47/structotbr_1_1DBus_1_1NeighborInfo.html',1,'otbr::DBus']]],
-  ['nodeinfo_954',['NodeInfo',['../d6/dbf/structotbr_1_1rest_1_1NodeInfo.html',1,'otbr::rest']]],
-  ['noncopyable_955',['NonCopyable',['../dc/d3c/classNonCopyable.html',1,'']]]
+  ['macaddress_995',['MacAddress',['../db/d8f/classotbr_1_1MacAddress.html',1,'otbr']]],
+  ['maccounters_996',['MacCounters',['../d6/d98/structotbr_1_1DBus_1_1MacCounters.html',1,'otbr::DBus']]],
+  ['mainloopmanager_997',['MainloopManager',['../d7/dcc/classotbr_1_1MainloopManager.html',1,'otbr']]],
+  ['mainloopprocessor_998',['MainloopProcessor',['../db/d03/classotbr_1_1MainloopProcessor.html',1,'otbr']]],
+  ['mdnsresponsecounters_999',['MdnsResponseCounters',['../df/d4d/structotbr_1_1MdnsResponseCounters.html',1,'otbr']]],
+  ['mdnstelemetryinfo_1000',['MdnsTelemetryInfo',['../df/d8c/structotbr_1_1MdnsTelemetryInfo.html',1,'otbr']]]
 ];

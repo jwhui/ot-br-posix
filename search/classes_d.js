@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['server_977',['Server',['../df/d24/classSimpleWeb_1_1Server.html',1,'SimpleWeb']]],
-  ['serviceregistration_978',['ServiceRegistration',['../da/da8/classotbr_1_1Mdns_1_1Publisher_1_1ServiceRegistration.html',1,'otbr::Mdns::Publisher']]],
-  ['srpserverinfo_979',['SrpServerInfo',['../d9/dc0/structotbr_1_1DBus_1_1SrpServerInfo.html',1,'otbr::DBus']]],
-  ['statebitmap_980',['StateBitmap',['../db/df3/structotbr_1_1StateBitmap.html',1,'otbr']]],
-  ['steeringdata_981',['SteeringData',['../d6/de8/classotbr_1_1SteeringData.html',1,'otbr']]]
+  ['radiocoexmetrics_1022',['RadioCoexMetrics',['../d5/d2d/structotbr_1_1DBus_1_1RadioCoexMetrics.html',1,'otbr::DBus']]],
+  ['radiospinelmetrics_1023',['RadioSpinelMetrics',['../dd/d09/structotbr_1_1DBus_1_1RadioSpinelMetrics.html',1,'otbr::DBus']]],
+  ['rcpinterfacemetrics_1024',['RcpInterfaceMetrics',['../dc/d2a/structotbr_1_1DBus_1_1RcpInterfaceMetrics.html',1,'otbr::DBus']]],
+  ['registration_1025',['Registration',['../da/d01/structotbr_1_1DBus_1_1SrpServerInfo_1_1Registration.html',1,'otbr::DBus::SrpServerInfo::Registration'],['../d3/dcf/classotbr_1_1Mdns_1_1Publisher_1_1Registration.html',1,'otbr::Mdns::Publisher::Registration']]],
+  ['request_1026',['Request',['../da/df0/classotbr_1_1rest_1_1Request.html',1,'otbr::rest']]],
+  ['resource_1027',['Resource',['../d7/d6e/classotbr_1_1rest_1_1Resource.html',1,'otbr::rest']]],
+  ['response_1028',['Response',['../d2/db0/classotbr_1_1rest_1_1Response.html',1,'otbr::rest']]],
+  ['responsecounters_1029',['ResponseCounters',['../d9/d29/structotbr_1_1DBus_1_1SrpServerInfo_1_1ResponseCounters.html',1,'otbr::DBus::SrpServerInfo']]],
+  ['restwebserver_1030',['RestWebServer',['../d8/d5d/classotbr_1_1rest_1_1RestWebServer.html',1,'otbr::rest']]]
 ];

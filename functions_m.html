@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.3.0-80d4c7b</span>
+   &#160;<span id="projectnumber">0.3.0-4489aa0</span>
    </div>
   </td>
  </tr>
@@ -86,8 +86,8 @@ $(function() {
 : <a class="el" href="db/d8f/classotbr_1_1MacAddress.html#a2f480004ad0ab8789f5a7433e41e14c9">otbr::MacAddress</a>
 </li>
 <li>mAddresses
-: <a class="el" href="d9/db0/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredHostInfo.html#a1d85c07ae63c07f8071f4e0e77d2fd5f">otbr::Mdns::Publisher::DiscoveredHostInfo</a>
-, <a class="el" href="d9/d60/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredInstanceInfo.html#ae1353ed61cf944071a772e453bf0fd38">otbr::Mdns::Publisher::DiscoveredInstanceInfo</a>
+: <a class="el" href="d9/db0/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredHostInfo.html#a1f5e487c39e9fca83ce39948898e8010">otbr::Mdns::Publisher::DiscoveredHostInfo</a>
+, <a class="el" href="d9/d60/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredInstanceInfo.html#a5ab20953e621f6c59126ff9518998499">otbr::Mdns::Publisher::DiscoveredInstanceInfo</a>
 </li>
 <li>mAddressMode
 : <a class="el" href="d9/dc0/structotbr_1_1DBus_1_1SrpServerInfo.html#a73095fd263a8e610425fafb722cdca2e">otbr::DBus::SrpServerInfo</a>
@@ -156,6 +156,9 @@ $(function() {
 </li>
 <li>mDuplicated
 : <a class="el" href="df/d4d/structotbr_1_1MdnsResponseCounters.html#aab7022ea62db26b0921cd2f634db65ea">otbr::MdnsResponseCounters</a>
+</li>
+<li>mEnabled
+: <a class="el" href="d7/d27/structotbr_1_1DBus_1_1TrelInfo.html#acedd4041fdaee251fa80b0a5511011b1">otbr::DBus::TrelInfo</a>
 </li>
 <li>mEvents
 : <a class="el" href="de/d3f/structAvahiWatch.html#a3924018de3fcf1df54feec74ac44a851">AvahiWatch</a>
@@ -242,6 +245,9 @@ $(function() {
 <li>mIp6
 : <a class="el" href="d5/d76/structotbr_1_1DBus_1_1Nat64AddressMapping.html#ad4e0a3d9903ecff58187be0c72a7e9d0">otbr::DBus::Nat64AddressMapping</a>
 </li>
+<li>mIsBooleanAttribute
+: <a class="el" href="d0/dee/structotbr_1_1Mdns_1_1Publisher_1_1TxtEntry.html#a302638a27bd22dc5daa7e4bf653b544a">otbr::Mdns::Publisher::TxtEntry</a>
+</li>
 <li>mIsChild
 : <a class="el" href="d2/d47/structotbr_1_1DBus_1_1NeighborInfo.html#a3434036a56475101da3fe0555c5b4fb4">otbr::DBus::NeighborInfo</a>
 </li>
@@ -263,8 +269,14 @@ $(function() {
 <li>mJoinerUdpPort
 : <a class="el" href="d2/da8/structotbr_1_1DBus_1_1ActiveScanResult.html#ad8aee291badf4f0e1758fe4257513f44">otbr::DBus::ActiveScanResult</a>
 </li>
+<li>mKey
+: <a class="el" href="d0/dee/structotbr_1_1Mdns_1_1Publisher_1_1TxtEntry.html#a5ffe4f723998a1d0deed1509e2822fd6">otbr::Mdns::Publisher::TxtEntry</a>
+</li>
 <li>mKeyLeaseTimeTotal
 : <a class="el" href="da/d01/structotbr_1_1DBus_1_1SrpServerInfo_1_1Registration.html#a52f879d6852b02557ece20a1350c9aba">otbr::DBus::SrpServerInfo::Registration</a>
+</li>
+<li>mKeyRegistrationEmaLatency
+: <a class="el" href="df/d8c/structotbr_1_1MdnsTelemetryInfo.html#a38a94112a9308fbdeed9944f6db2122a">otbr::MdnsTelemetryInfo</a>
 </li>
 <li>mLastRssi
 : <a class="el" href="db/d06/structotbr_1_1DBus_1_1ChildInfo.html#a8b9d2548153e229b433c5b2e9e5e2ba2">otbr::DBus::ChildInfo</a>
@@ -306,7 +318,6 @@ $(function() {
 <li>mName
 : <a class="el" href="df/dc0/structotbr_1_1DBus_1_1InfraLinkInfo.html#a23dbabff6fc7ddc5bd76c3dd6734e236">otbr::DBus::InfraLinkInfo</a>
 , <a class="el" href="d9/d60/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredInstanceInfo.html#a0ce2624a93630ec91dea4207f71fa438">otbr::Mdns::Publisher::DiscoveredInstanceInfo</a>
-, <a class="el" href="d0/dee/structotbr_1_1Mdns_1_1Publisher_1_1TxtEntry.html#a5048dc17ab692321b10018fea0e99856">otbr::Mdns::Publisher::TxtEntry</a>
 </li>
 <li>mNameErrorResponse
 : <a class="el" href="d0/daa/structotbr_1_1DBus_1_1DnssdCounters.html#ac0cb7dab94a7c07f2a8abab7156492de">otbr::DBus::DnssdCounters</a>
@@ -318,7 +329,8 @@ $(function() {
 : <a class="el" href="d5/d02/structotbr_1_1DBus_1_1OnMeshPrefix.html#a11c9f28f9eb3e2d725ddf9532b3208ef">otbr::DBus::OnMeshPrefix</a>
 </li>
 <li>mNetifIndex
-: <a class="el" href="d9/d60/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredInstanceInfo.html#ad4463c1ef974733f82d95071754206c5">otbr::Mdns::Publisher::DiscoveredInstanceInfo</a>
+: <a class="el" href="d9/db0/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredHostInfo.html#af7ced7e1a2539bbe9be42694a8067d7c">otbr::Mdns::Publisher::DiscoveredHostInfo</a>
+, <a class="el" href="d9/d60/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredInstanceInfo.html#ad4463c1ef974733f82d95071754206c5">otbr::Mdns::Publisher::DiscoveredInstanceInfo</a>
 </li>
 <li>mNetworkData
 : <a class="el" href="d1/d82/structotbr_1_1DBus_1_1LinkModeConfig.html#a4d76fd7e83e0ceae739889949d1e0598">otbr::DBus::LinkModeConfig</a>
@@ -371,6 +383,9 @@ $(function() {
 <li>mNumRxRequest
 : <a class="el" href="d5/d2d/structotbr_1_1DBus_1_1RadioCoexMetrics.html#a4ceb49afb69464eca34917b1d70326d7">otbr::DBus::RadioCoexMetrics</a>
 </li>
+<li>mNumTrelPeers
+: <a class="el" href="d7/d27/structotbr_1_1DBus_1_1TrelInfo.html#a63e97be30f3de64713e45b8341f0ecc2">otbr::DBus::TrelInfo</a>
+</li>
 <li>mNumTxDelayedGrant
 : <a class="el" href="d5/d2d/structotbr_1_1DBus_1_1RadioCoexMetrics.html#ac4eba4a3035914ffa03bdba802e6ff26">otbr::DBus::RadioCoexMetrics</a>
 </li>
@@ -417,8 +432,8 @@ $(function() {
 : <a class="el" href="dd/d1d/structotbr_1_1DBus_1_1LeaderData.html#af3be386eaa6b9b47c90d9ead331ef6a2">otbr::DBus::LeaderData</a>
 </li>
 <li>mPoller
-: <a class="el" href="db/dfa/structAvahiTimeout.html#a7cc8a98d3f52ef029374cdb09c811be1">AvahiTimeout</a>
-, <a class="el" href="de/d3f/structAvahiWatch.html#a2a718bf695e9d354d7f9cd0f9278f4c9">AvahiWatch</a>
+: <a class="el" href="db/dfa/structAvahiTimeout.html#a8652f9cd2bdd7d6114a096a004171930">AvahiTimeout</a>
+, <a class="el" href="de/d3f/structAvahiWatch.html#a70d06a389657f67b90697deeea3edda6">AvahiWatch</a>
 </li>
 <li>mPort
 : <a class="el" href="d9/dc0/structotbr_1_1DBus_1_1SrpServerInfo.html#a25195ae7338f144a96399d5156955681">otbr::DBus::SrpServerInfo</a>
@@ -512,6 +527,9 @@ $(function() {
 <li>mRxBroadcast
 : <a class="el" href="d6/d98/structotbr_1_1DBus_1_1MacCounters.html#aece6eb69aa06369fd418adafee5e7f6c">otbr::DBus::MacCounters</a>
 </li>
+<li>mRxBytes
+: <a class="el" href="df/d0d/structotbr_1_1DBus_1_1TrelInfo_1_1TrelPacketCounters.html#a43e5d4887f865c934556743f6d08984f">otbr::DBus::TrelInfo::TrelPacketCounters</a>
+</li>
 <li>mRxData
 : <a class="el" href="d6/d98/structotbr_1_1DBus_1_1MacCounters.html#acbcb846f4ceaafe497a219f4fc8c3308">otbr::DBus::MacCounters</a>
 </li>
@@ -559,6 +577,9 @@ $(function() {
 <li>mRxOther
 : <a class="el" href="d6/d98/structotbr_1_1DBus_1_1MacCounters.html#ab78ba14fe7bd2713f2bda2c25b763e5f">otbr::DBus::MacCounters</a>
 </li>
+<li>mRxPackets
+: <a class="el" href="df/d0d/structotbr_1_1DBus_1_1TrelInfo_1_1TrelPacketCounters.html#a6d525e0e36159b4caaa13e83dd951630">otbr::DBus::TrelInfo::TrelPacketCounters</a>
+</li>
 <li>mRxSuccess
 : <a class="el" href="da/d27/structotbr_1_1DBus_1_1IpCounters.html#a1b74779937a9e1fb28ac079f7ac28484">otbr::DBus::IpCounters</a>
 </li>
@@ -585,6 +606,10 @@ $(function() {
 </li>
 <li>mServices
 : <a class="el" href="d9/dc0/structotbr_1_1DBus_1_1SrpServerInfo.html#afb4a1246590cae8fa211f66331954401">otbr::DBus::SrpServerInfo</a>
+</li>
+<li>mShouldReport
+: <a class="el" href="db/dfa/structAvahiTimeout.html#ab4b79bd19d3893d8e6dd87b6ee725273">AvahiTimeout</a>
+, <a class="el" href="de/d3f/structAvahiWatch.html#afb2ce757d1c4a769c9d7500bf363bc5b">AvahiWatch</a>
 </li>
 <li>mSlaac
 : <a class="el" href="d5/d02/structotbr_1_1DBus_1_1OnMeshPrefix.html#a1a8eae154d7053fe50550c6a99cd0f0e">otbr::DBus::OnMeshPrefix</a>
@@ -634,6 +659,9 @@ $(function() {
 <li>mTransferredValidFrameCount
 : <a class="el" href="dc/d2a/structotbr_1_1DBus_1_1RcpInterfaceMetrics.html#a46072768c14f99c91245eeb883e931de">otbr::DBus::RcpInterfaceMetrics</a>
 </li>
+<li>mTrelCounters
+: <a class="el" href="d7/d27/structotbr_1_1DBus_1_1TrelInfo.html#ae63df5228c90c670f1ebfdcd892399ce">otbr::DBus::TrelInfo</a>
+</li>
 <li>mTtl
 : <a class="el" href="d9/db0/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredHostInfo.html#a52fd4104c6c792921fffc1cca55b4ae0">otbr::Mdns::Publisher::DiscoveredHostInfo</a>
 , <a class="el" href="d9/d60/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredInstanceInfo.html#a5441e0fab11824a51c258a932082510f">otbr::Mdns::Publisher::DiscoveredInstanceInfo</a>
@@ -652,6 +680,9 @@ $(function() {
 </li>
 <li>mTxBroadcast
 : <a class="el" href="d6/d98/structotbr_1_1DBus_1_1MacCounters.html#ad1286602cfa3be2340e794a69a7fd4fb">otbr::DBus::MacCounters</a>
+</li>
+<li>mTxBytes
+: <a class="el" href="df/d0d/structotbr_1_1DBus_1_1TrelInfo_1_1TrelPacketCounters.html#a1b722480f9d4cb0ffa76acf53353def1">otbr::DBus::TrelInfo::TrelPacketCounters</a>
 </li>
 <li>mTxData
 : <a class="el" href="d6/d98/structotbr_1_1DBus_1_1MacCounters.html#adf695a93079159554ab9fb092005ccaa">otbr::DBus::MacCounters</a>
@@ -673,6 +704,7 @@ $(function() {
 </li>
 <li>mTxFailure
 : <a class="el" href="da/d27/structotbr_1_1DBus_1_1IpCounters.html#a71dc6410db83b3bc970fe47cb47feffd">otbr::DBus::IpCounters</a>
+, <a class="el" href="df/d0d/structotbr_1_1DBus_1_1TrelInfo_1_1TrelPacketCounters.html#aca6ee6b90a9f89ed8a0d4d2db6d7c2f4">otbr::DBus::TrelInfo::TrelPacketCounters</a>
 </li>
 <li>mTxFrameByteCount
 : <a class="el" href="dc/d2a/structotbr_1_1DBus_1_1RcpInterfaceMetrics.html#afb2543caaea2246b18dc1918dcc545cc">otbr::DBus::RcpInterfaceMetrics</a>
@@ -689,6 +721,9 @@ $(function() {
 <li>mTxOther
 : <a class="el" href="d6/d98/structotbr_1_1DBus_1_1MacCounters.html#adf1aeb1c7495b89414a0d4197317ef2b">otbr::DBus::MacCounters</a>
 </li>
+<li>mTxPackets
+: <a class="el" href="df/d0d/structotbr_1_1DBus_1_1TrelInfo_1_1TrelPacketCounters.html#a791a809cbb32a22ed75b05c9a0aeb12f">otbr::DBus::TrelInfo::TrelPacketCounters</a>
+</li>
 <li>mTxRetry
 : <a class="el" href="d6/d98/structotbr_1_1DBus_1_1MacCounters.html#a7b0ecd9a4bd2a2e3954a5902adea29d3">otbr::DBus::MacCounters</a>
 </li>
@@ -696,7 +731,7 @@ $(function() {
 : <a class="el" href="da/d27/structotbr_1_1DBus_1_1IpCounters.html#ac4bd42863856df69429e47cc9aa6e661">otbr::DBus::IpCounters</a>
 </li>
 <li>mTxtData
-: <a class="el" href="d9/d60/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredInstanceInfo.html#addce06384a593642af7e2e96f63cd05c">otbr::Mdns::Publisher::DiscoveredInstanceInfo</a>
+: <a class="el" href="d9/d60/structotbr_1_1Mdns_1_1Publisher_1_1DiscoveredInstanceInfo.html#a983b82deed658ab1870a9d48390c863d">otbr::Mdns::Publisher::DiscoveredInstanceInfo</a>
 </li>
 <li>mTxTotal
 : <a class="el" href="d6/d98/structotbr_1_1DBus_1_1MacCounters.html#a0a1b4aeae89f481c351aab91ef500ffb">otbr::DBus::MacCounters</a>
