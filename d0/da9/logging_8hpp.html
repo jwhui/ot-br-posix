@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.3.0-ae8b4a8</span>
+   &#160;<span id="projectnumber">0.3.0-7d32700</span>
    </div>
   </td>
  </tr>
@@ -142,6 +142,8 @@ Functions</h2></td></tr>
 <tr class="separator:ada4d1801b5705ba2b957fd1802b8a984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2bf385c625fa5e9beaba21d26326fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da9/logging_8hpp.html#a5a2bf385c625fa5e9beaba21d26326fe">otbrLogDeinit</a> (void)</td></tr>
 <tr class="separator:a5a2bf385c625fa5e9beaba21d26326fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f788c3c36e993dcc0dd223ea133cc1"><td class="memItemLeft" align="right" valign="top">otLogLevel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da9/logging_8hpp.html#a35f788c3c36e993dcc0dd223ea133cc1">ConvertToOtLogLevel</a> (<a class="el" href="../../d0/da9/logging_8hpp.html#ada87d1da6f6926eb3d881aae37340f10">otbrLogLevel</a> aLevel)</td></tr>
+<tr class="separator:a35f788c3c36e993dcc0dd223ea133cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file define logging interface. </p>
@@ -358,10 +360,10 @@ Functions</h2></td></tr>
 <div class="line">        otbrLog(_err == <a class="code" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaad50a28e34d631b46f6b959681e42a432">OTBR_ERROR_NONE</a> ? <a class="code" href="../../d0/da9/logging_8hpp.html#ada87d1da6f6926eb3d881aae37340f10aeb0321d42905748f2bb55dbd11827065">OTBR_LOG_INFO</a> : <a class="code" href="../../d0/da9/logging_8hpp.html#ada87d1da6f6926eb3d881aae37340f10a83e0d72526c4ad89d262a4e2235ab05e">OTBR_LOG_WARNING</a>, OTBR_LOG_TAG, aFormat <span class="stringliteral">&quot;: %s&quot;</span>, \</div>
 <div class="line">                ##__VA_ARGS__, <a class="code" href="../../d0/da9/logging_8hpp.html#ada4d1801b5705ba2b957fd1802b8a984">otbrErrorString</a>(_err));                                                    \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="acommon_2types_8hpp_html_a9addd74a14dca1dab1b3e7a8205455aaad50a28e34d631b46f6b959681e42a432"><div class="ttname"><a href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaad50a28e34d631b46f6b959681e42a432">OTBR_ERROR_NONE</a></div><div class="ttdeci">@ OTBR_ERROR_NONE</div><div class="ttdoc">No error.</div><div class="ttdef"><b>Definition:</b> types.hpp:72</div></div>
+<div class="ttc" id="acommon_2types_8hpp_html_a9addd74a14dca1dab1b3e7a8205455aaad50a28e34d631b46f6b959681e42a432"><div class="ttname"><a href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aaad50a28e34d631b46f6b959681e42a432">OTBR_ERROR_NONE</a></div><div class="ttdeci">@ OTBR_ERROR_NONE</div><div class="ttdoc">No error.</div><div class="ttdef"><b>Definition:</b> types.hpp:73</div></div>
 <div class="ttc" id="alogging_8hpp_html_ada4d1801b5705ba2b957fd1802b8a984"><div class="ttname"><a href="../../d0/da9/logging_8hpp.html#ada4d1801b5705ba2b957fd1802b8a984">otbrErrorString</a></div><div class="ttdeci">const char * otbrErrorString(otbrError aError)</div><div class="ttdef"><b>Definition:</b> logging.cpp:235</div></div>
-<div class="ttc" id="alogging_8hpp_html_ada87d1da6f6926eb3d881aae37340f10a83e0d72526c4ad89d262a4e2235ab05e"><div class="ttname"><a href="../../d0/da9/logging_8hpp.html#ada87d1da6f6926eb3d881aae37340f10a83e0d72526c4ad89d262a4e2235ab05e">OTBR_LOG_WARNING</a></div><div class="ttdeci">@ OTBR_LOG_WARNING</div><div class="ttdoc">Warning conditions.</div><div class="ttdef"><b>Definition:</b> logging.hpp:57</div></div>
-<div class="ttc" id="alogging_8hpp_html_ada87d1da6f6926eb3d881aae37340f10aeb0321d42905748f2bb55dbd11827065"><div class="ttname"><a href="../../d0/da9/logging_8hpp.html#ada87d1da6f6926eb3d881aae37340f10aeb0321d42905748f2bb55dbd11827065">OTBR_LOG_INFO</a></div><div class="ttdeci">@ OTBR_LOG_INFO</div><div class="ttdoc">Informational.</div><div class="ttdef"><b>Definition:</b> logging.hpp:59</div></div>
+<div class="ttc" id="alogging_8hpp_html_ada87d1da6f6926eb3d881aae37340f10a83e0d72526c4ad89d262a4e2235ab05e"><div class="ttname"><a href="../../d0/da9/logging_8hpp.html#ada87d1da6f6926eb3d881aae37340f10a83e0d72526c4ad89d262a4e2235ab05e">OTBR_LOG_WARNING</a></div><div class="ttdeci">@ OTBR_LOG_WARNING</div><div class="ttdoc">Warning conditions.</div><div class="ttdef"><b>Definition:</b> logging.hpp:56</div></div>
+<div class="ttc" id="alogging_8hpp_html_ada87d1da6f6926eb3d881aae37340f10aeb0321d42905748f2bb55dbd11827065"><div class="ttname"><a href="../../d0/da9/logging_8hpp.html#ada87d1da6f6926eb3d881aae37340f10aeb0321d42905748f2bb55dbd11827065">OTBR_LOG_INFO</a></div><div class="ttdeci">@ OTBR_LOG_INFO</div><div class="ttdoc">Informational.</div><div class="ttdef"><b>Definition:</b> logging.hpp:58</div></div>
 </div><!-- fragment --><p>This macro log an action result according to <code>aError</code>.</p>
 <p>If <code>aError</code> is OTBR_ERROR_NONE, the log level will be OTBR_LOG_INFO, otherwise OTBR_LOG_WARNING.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -435,6 +437,32 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a35f788c3c36e993dcc0dd223ea133cc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f788c3c36e993dcc0dd223ea133cc1">&#9670;&nbsp;</a></span>ConvertToOtLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">otLogLevel ConvertToOtLogLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/da9/logging_8hpp.html#ada87d1da6f6926eb3d881aae37340f10">otbrLogLevel</a>&#160;</td>
+          <td class="paramname"><em>aLevel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert otbrLogLevel to otLogLevel.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aLevel</td><td>The otbrLogLevel to convert.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the corresponding OT log level. </dd></dl>
+
+</div>
+</div>
 <a id="ab4d8013f506ecb2f6d625eb40b3022ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab4d8013f506ecb2f6d625eb40b3022ce">&#9670;&nbsp;</a></span>otbrDump()</h2>
 

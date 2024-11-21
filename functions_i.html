@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.3.0-ae8b4a8</span>
+   &#160;<span id="projectnumber">0.3.0-7d32700</span>
    </div>
   </td>
  </tr>
@@ -65,13 +65,20 @@ $(function() {
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a id="index_i"></a>- i -</h3><ul>
+<li>InfraIfSetIcmp6NdSendCallback()
+: <a class="el" href="da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#acf99ad8a793adbd1a81b79f8c28273d9">otbr::Ncp::NcpSpinel</a>
+</li>
 <li>Init()
 : <a class="el" href="d5/d01/structotbr_1_1Application.html#a0ff7f453566d8b877efe74bce7b58c79">otbr::Application</a>
 , <a class="el" href="d6/d8f/classotbr_1_1Crc16.html#a3e078a50d673a91b1ff0484e8b682164">otbr::Crc16</a>
-, <a class="el" href="d3/dd6/structotbr_1_1DBus_1_1DBusAgent.html#a1c376585d6dd9395ab4c2c4d8109a662">otbr::DBus::DBusAgent</a>
+, <a class="el" href="d3/dd6/structotbr_1_1DBus_1_1DBusAgent.html#a44a0d5c7f3ad0ed7f24d6e1eb9e53841">otbr::DBus::DBusAgent</a>
 , <a class="el" href="da/d4d/classotbr_1_1DBus_1_1DBusObject.html#a06c05092b94dada5df9be97f0801ec5c">otbr::DBus::DBusObject</a>
-, <a class="el" href="de/d73/classotbr_1_1DBus_1_1DBusThreadObject.html#a56365e35e991a3d5c2462d3c224b27b7">otbr::DBus::DBusThreadObject</a>
-, <a class="el" href="db/d17/classotbr_1_1Ncp_1_1ControllerOpenThread.html#aa914c67ae0f2c54e2c447d18ef3a3bf9">otbr::Ncp::ControllerOpenThread</a>
+, <a class="el" href="d7/dda/classotbr_1_1DBus_1_1DBusThreadObjectNcp.html#a92e2b7dcaf5701d78521e8f849312674">otbr::DBus::DBusThreadObjectNcp</a>
+, <a class="el" href="dc/d5c/classotbr_1_1DBus_1_1DBusThreadObjectRcp.html#aec1f6f934e2a6ba45e978f2507116c78">otbr::DBus::DBusThreadObjectRcp</a>
+, <a class="el" href="d2/d1c/classotbr_1_1Ncp_1_1NcpHost.html#af91ea64407d0fd45222d133ed1d26721">otbr::Ncp::NcpHost</a>
+, <a class="el" href="da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a6a3d5ce7927e04ef4ea30998bcb5f84b">otbr::Ncp::NcpSpinel</a>
+, <a class="el" href="dd/d09/classotbr_1_1Ncp_1_1RcpHost.html#a9252088c8b3c03dc68a1ec14621b7d12">otbr::Ncp::RcpHost</a>
+, <a class="el" href="db/d04/classotbr_1_1Ncp_1_1ThreadHost.html#aaaf355f840fc53cb15b636d7a3783cdd">otbr::Ncp::ThreadHost</a>
 , <a class="el" href="d4/db3/classotbr_1_1rest_1_1Connection.html#afa7dfadb1f42d43446627c8d8a00bb83">otbr::rest::Connection</a>
 , <a class="el" href="d7/def/classotbr_1_1rest_1_1Parser.html#a5902787870eb5bb767fd0bdd66bf126c">otbr::rest::Parser</a>
 , <a class="el" href="d7/d6e/classotbr_1_1rest_1_1Resource.html#a13ccb952db19ec5f56108b79ba1812a4">otbr::rest::Resource</a>
@@ -81,21 +88,44 @@ $(function() {
 , <a class="el" href="d5/d8a/classotbr_1_1vendor_1_1VendorServer.html#a1b39e4dc4ebaa00e91696fb7eb78160a">otbr::vendor::VendorServer</a>
 </li>
 <li>Initialize()
-: <a class="el" href="d9/dea/classotbr_1_1ubus_1_1UbusServer.html#ab70f9f696d56233a335ecf89a28f97fe">otbr::ubus::UbusServer</a>
+: <a class="el" href="d9/dea/classotbr_1_1ubus_1_1UbusServer.html#aa616b907b024da2a5c878498cccb7bc0">otbr::ubus::UbusServer</a>
 </li>
 <li>InstallUbusObject()
 : <a class="el" href="d9/dea/classotbr_1_1ubus_1_1UbusServer.html#abb193c3f5a1f79f28cfc3c979b2f7f2e">otbr::ubus::UbusServer</a>
 </li>
 <li>Ip6Address()
-: <a class="el" href="d2/dfe/classotbr_1_1Ip6Address.html#a7658081a534ea1a62ce81022e8099acf">otbr::Ip6Address</a>
+: <a class="el" href="d2/dfe/classotbr_1_1Ip6Address.html#afa45960986df2fdbdddfd4dd9a974a4c">otbr::Ip6Address</a>
+</li>
+<li>Ip6IsEnabled()
+: <a class="el" href="d3/d1e/classotbr_1_1Ncp_1_1NcpNetworkProperties.html#a797472df743afd9110f56295538d16dc">otbr::Ncp::NcpNetworkProperties</a>
+, <a class="el" href="d6/d75/classotbr_1_1Ncp_1_1NetworkProperties.html#ab08af18907d91744ccab7742295c52e8">otbr::Ncp::NetworkProperties</a>
+, <a class="el" href="d3/d8c/classotbr_1_1Ncp_1_1OtNetworkProperties.html#a9b7040715a60d7d541fca86b8ace1b18">otbr::Ncp::OtNetworkProperties</a>
 </li>
 <li>Ip6Prefix()
 : <a class="el" href="da/d3a/classotbr_1_1Ip6Prefix.html#ac6b578d2623e99df2efe19aef4fa04e7">otbr::Ip6Prefix</a>
+</li>
+<li>Ip6Send()
+: <a class="el" href="da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#aab4ce0841ba9f9590c8e2bd30c2639dc">otbr::Ncp::NcpSpinel</a>
+</li>
+<li>Ip6SetAddressCallback()
+: <a class="el" href="da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a9adba505196d1391551fe631e4b404cb">otbr::Ncp::NcpSpinel</a>
+</li>
+<li>Ip6SetAddressMulticastCallback()
+: <a class="el" href="da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a765ff33f16c94fd9c5979eed65604872">otbr::Ncp::NcpSpinel</a>
+</li>
+<li>Ip6SetEnabled()
+: <a class="el" href="da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a5552a680bafcd37905a2c47ac2cb7e50">otbr::Ncp::NcpSpinel</a>
+</li>
+<li>Ip6SetReceiveCallback()
+: <a class="el" href="da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#af45c6c5378a724b13046c6c62e59c5f9">otbr::Ncp::NcpSpinel</a>
 </li>
 <li>IsComplete()
 : <a class="el" href="d4/db3/classotbr_1_1rest_1_1Connection.html#a21704f6af0f8b07b0755989241897e17">otbr::rest::Connection</a>
 , <a class="el" href="da/df0/classotbr_1_1rest_1_1Request.html#af52a944a8dd3cd4d85d2dc1d1a2f17be">otbr::rest::Request</a>
 , <a class="el" href="d2/db0/classotbr_1_1rest_1_1Response.html#abd78524cafaaa3f93f510481361a77cd">otbr::rest::Response</a>
+</li>
+<li>IsDefaultRoutePrefix()
+: <a class="el" href="da/d3a/classotbr_1_1Ip6Prefix.html#a9e375ec120d23136ca1cf28fc6c2a334">otbr::Ip6Prefix</a>
 </li>
 <li>IsHost()
 : <a class="el" href="d1/de1/structDnsNameInfo.html#ad5a268d9a389d76bc924fc6581c08e9c">DnsNameInfo</a>
@@ -119,6 +149,9 @@ $(function() {
 : <a class="el" href="da/ddc/classotbr_1_1Mdns_1_1Publisher.html#a75cf59bf3d84ac98c79a29fb22054ec8">otbr::Mdns::Publisher</a>
 , <a class="el" href="db/dc6/classotbr_1_1Mdns_1_1PublisherAvahi.html#a3621443d0205c646a0702adfc9ce5655">otbr::Mdns::PublisherAvahi</a>
 , <a class="el" href="de/d29/classotbr_1_1Mdns_1_1PublisherMDnsSd.html#a4415a4f7d927ddbf82f17daba70475b4">otbr::Mdns::PublisherMDnsSd</a>
+</li>
+<li>IsUlaPrefix()
+: <a class="el" href="da/d3a/classotbr_1_1Ip6Prefix.html#a39c0aa98d33f3a4c8aac214639d44903">otbr::Ip6Prefix</a>
 </li>
 <li>IsUnspecified()
 : <a class="el" href="d2/dfe/classotbr_1_1Ip6Address.html#aadf35800a600de9697206d4f643e7ea9">otbr::Ip6Address</a>
